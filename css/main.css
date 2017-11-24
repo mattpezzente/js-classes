@@ -35,7 +35,7 @@ table {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.main-form, .content {
+.main-form, .main-form .group, .main-form button, .content {
   margin-left: auto;
   margin-right: auto; }
 
@@ -71,36 +71,43 @@ h1 {
   padding: 1rem;
   background: #333;
   max-width: 400px; }
-  .main-form > legend {
+  .main-form legend {
     width: 100%;
     text-align: center;
     margin-bottom: 1rem; }
-  .main-form > label {
-    display: block;
+  .main-form .group {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid #999;
+    border-radius: 5px; }
+  .main-form label {
+    display: inline-block;
     margin-right: 0.9rem;
     text-align: left;
     width: calc(20% - 0.5rem); }
-  .main-form > input {
-    display: block;
+  .main-form input {
+    display: inline-block;
     margin-bottom: 1rem;
     width: calc(80% - 0.5rem);
     font-size: 0.75rem; }
-  .main-form > label:nth-of-type(4) {
-    width: calc(38% - 0.5rem); }
-  .main-form > input:nth-of-type(4) {
-    width: calc(62% - 0.5rem); }
-  .main-form > button {
+  .main-form .lbl-computer-type {
+    width: calc(40% - 0.5rem); }
+  .main-form .txt-computer-type {
+    width: calc(60% - 0.5rem); }
+  .main-form button {
+    display: block;
     background: #206ec6;
-    margin: 0 0.5rem;
     padding: 0.5rem 1rem;
+    width: 100%;
     color: #eee;
-    font-size: 0.75rem;
+    font-size: 0.825rem;
     cursor: pointer;
     -webkit-transition: 0.2s;
     transition: 0.2s; }
-    .main-form > button:hover {
+    .main-form button:hover {
       background: #237be2; }
-    .main-form > button:active {
+    .main-form button:active {
       background: #1d63b4; }
 
 .content {
