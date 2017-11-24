@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
+@import partials/_reset
+
+$background: #333
+$off-white: #eee
+
+%center-object
+	margin-left: auto
+	margin-right: auto
+
+legend, label, button, p, h1, h2, h3, input
+	font-family: 'Montserrat', sans-serif;
+	color: $off-white
+
+body
+	background: #111
+	padding: 1rem
+
+h1
+	font-size: 1.5rem
+
+.main-form
+	@extend %center-object
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: center
+	margin-bottom: 1rem
+	padding: 1rem
+	background: $background
+	max-width: 400px
+
+	>legend
+		width: 100%
+		text-align: center
+		margin-bottom: 1rem
+
+	>label
+		display: block
+		margin-right: 0.9rem
+		text-align: left
+		width: calc(20% - 0.5rem)
+		
+	>input
+		display: block
+		margin-bottom: 1rem
+		width: calc(80% - 0.5rem)
+		font-size: 0.75rem
+
+	>label:nth-of-type(4)
+		width: calc(38% - 0.5rem)
+
+	>input:nth-of-type(4)
+		width: calc(62% - 0.5rem)
+
+	>button 
+		background: #206ec6
+		margin: 0 0.5rem
+		padding: 0.5rem 1rem
+		color: #eee
+		font-size: 0.75rem
+		cursor: pointer
+		transition: 0.2s
+
+		&:hover
+			background: #237be2
+
+		&:active
+			background: #1d63b4
+
+.content
+	@extend %center-object
+	background: $background
+	padding: 1rem
+	max-width: 800px
+
+.students
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: left
+	padding: 0.5rem 0
+
+.student-item
+	padding: 0.5rem
+	background: #444
+	width: calc(100%/3 - 0.5rem)
+
+	h2
+		text-align: center
+		font-size: 1.25rem
+		margin-bottom: 1rem
+
+	p
+		font-size: 0.875rem
+		margin-bottom: 0.25rem
+
+	span
+		font-weight: 300
+
+
