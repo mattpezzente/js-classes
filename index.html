@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <!-- Matthew Pezzente -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  
-  <title>Excercises</title>
-  
+  <title>OOP Review</title>
 </head>
 <body>
   <header>
@@ -17,28 +18,23 @@
   <main>
     <form class="main-form">
       <legend>Assignment #1: OOP Review</legend>
-      <label>School: </label><input type="text" />
-      <label>Name: </label><input type="text" />
-      <label>Grades: </label><input type="text" />
-      <label>Computer Type: </label><input type="text" />
-      <button type="submit">Add</button>
-      <button type="submit">Done</button>
+      <label>Name: </label><input class="txt-name" type="text" data-student="student" />
+      <label>School: </label><input class="txt-school" type="text" data-student="school" value="Full Sail University" />
+      <label>Grades: </label><input class="txt-grades" type="text" data-student="student" />
+      <label>Computer Type: </label><input class="txt-computor-type" type="text" data-student="student" />
+      <button class="btn-add" type="submit">Add</button>
+      <button class="btn-update" type="submit">Update</button>
     </form>
   </main>
   <section class="content">
     <h1>Students</h1>
     <ul class="students">
-      <li class="student-item">
-        <h2 class="student-name">Student Name</h2>
-        <p>School: <span class="student-school">Full Sail University</span></p>
-        <p>Grades: <span class="student-grades">70, 80, 90</span></p>
-        <p>Average: <span class="student-average">78.8</span></p>
-      </li>
     </ul>
   </section>
   <footer>
   </footer>
   <script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/classes.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

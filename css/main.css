@@ -43,6 +43,10 @@ legend, label, button, p, h1, h2, h3, input {
   font-family: 'Montserrat', sans-serif;
   color: #eee; }
 
+input {
+  font-family: 'Montserrat', sans-serif;
+  color: #111; }
+
 body {
   background: #111;
   padding: 1rem; }
@@ -120,6 +124,7 @@ h1 {
   padding: 0.5rem 0; }
 
 .student-item {
+  margin: 0.25rem;
   padding: 0.5rem;
   background: #444;
   width: calc(100%/3 - 0.5rem); }
