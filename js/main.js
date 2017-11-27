@@ -1,27 +1,37 @@
-let students
+let zooAnimals
 (() => {
-	students = []
-	document.querySelector('.btn-add').addEventListener('click', addStudent)
-	document.querySelector('.btn-update').addEventListener('click', updateStudents)
+	Animal.zoo = document.querySelector('.txt-zoo').value
+	zooAnimals = []
+	document.querySelector('.btn-add').addEventListener('click', addAnimal)
+	document.querySelector('.btn-update').addEventListener('click', updateZoo)
 })()
 
-function addStudent(e) {
+function addAnimal(e) {
 	e.preventDefault()
-	let insertionPoint = document.querySelector('.students')
-	let inputValues = document.querySelectorAll('input[data-student="student"]')
-	let newStudent = new Student(inputValues[0].value, inputValues[1].value, inputValues[2].value)
-	newStudent.school = document.querySelector('.txt-school').value
-	insertionPoint.insertAdjacentHTML('beforeend', newStudent.createStudent())
+	let tempAnimal
+	let formValues = document.querySelectorAll('*[data-zoo="animal"]')
+	switch(formValues[0].value) {
+		case "Lion":
+			tempAnimal = new Lion(formValues[1].value, formValues[2].value)
+			break;
+		case "Owl":
+			tempAnimal = new Owl(formValues[1].value, formValues[2].value)
+			break;
+		case "Dolphine":
+			tempAnimal = new Dolphine(formValues[1].value, formValues[2].value)
+			break;
+	}
+	tempAnimal.displayInfo()
 	document.querySelector('.main-form').reset()
-	students.unshift(newStudent)
+	zooAnimals.push(tempAnimal)
 }
 
-function updateStudents(e) {
+function updateZoo(e) {
 	e.preventDefault()
-	let insertionPoint = document.querySelector('.students')
-	insertionPoint.innerHTML = ''
-	for (var i = 0; i < students.length; i++) {
-		students[i].school = document.querySelector('.txt-school').value
-		insertionPoint.insertAdjacentHTML('beforeend', students[i].createStudent())
+	document.querySelector('.zoo-tbody').innerHTML = ''
+	Animal.zoo = document.querySelector('.txt-zoo').value
+	for (var i = 0; i < zooAnimals.length; i++) {
+		zooAnimals[i].displayInfo()
+		console.log(zooAnimals[i].zoo)
 	}
 }

@@ -1,55 +1,64 @@
-class School {
+class Animal {
 	constructor() {
-		this.school = 'Hello'
-		this.students = []
-		this.faculty = []
-	}
-
-	enrollStudent(student) {
-
-	}
-
-	hireTeacher(teacher) {
-
-	}
-}
-
-class Person {
-	constructor() {
-		this.fname = ''
-		this.lname = ''
-		this.gender = ''
-	}
-}
-
-class Teacher extends Person {
-	constructor(first, last, teaching) {
-		super()
-		fname = first
-		lname = last
-		this.class = teaching
-	}
-}
-
-class Student extends Person { 
-	constructor(name, grades, computerType) {
-		super()
-		this.name = name
+		this.name
 		this.id = Utils.randomInt(0, 10000)
-		this.grades = Utils.formatGrades(grades)
-		this.gradeAvg = Utils.gradeGenerator(grades)
-		this.computerType = computerType
-		this.studentHTML = createStudent()
+		this.species
+		this.weight
 	}
 
-	createStudent() {
-		let tempHTML = '<li class="student-item">'
-		tempHTML += `<h2 class="student-name">${this.name}</h2>`
-		tempHTML += `<p>School: <span class="student-school">${this.school}</span></p>`
-		tempHTML += `<p>Grades: <span class="student-grades">${this.grades}</span></p>`
-		tempHTML += `<p>Average: <span class="student-grades">${this.gradeAvg}</span></p>`
-		tempHTML += `<p>Computer Type: <span class="student-computer-type">${this.computerType}</span></p>`
-		tempHTML += '</li>'
-		return tempHTML
+	displayInfo() {
+		let insertionPoint = document.querySelector('.zoo-tbody')
+		let tempHTML = `<tr id="animal-id-${this.id}">`
+		tempHTML += `<td>${this.name}</td>`
+		tempHTML += `<td>${this.id}</td>`
+		tempHTML += `<td>${this.species}</td>`
+		tempHTML += `<td>${this.weight}</td>`
+		tempHTML += `<td>${Animal.zoo}</td>`
+		tempHTML += '</tr>'
+		insertionPoint.insertAdjacentHTML('beforeend', tempHTML)
+		document.querySelector(`#animal-id-${this.id}`).addEventListener('click', this.feed)
+	}
+
+	feed() {
+		alert(this.species + ' has no diet')
+	}
+}
+
+class Lion extends Animal {
+	constructor(n, w) {
+		super()
+		this.name = n
+		this.species = "Lion"
+		this.weight = w		
+	}
+
+	feed() {
+		alert('Lion\'s eat large amounts of meat')
+	}
+}
+
+class Owl extends Animal {
+	constructor(n, w) {
+		super()
+		this.name = n
+		this.species = "Owl"
+		this.weight = w
+	}
+
+	feed() {
+		alert('Owls\'s eat a small amount of meat')
+	}
+}
+
+class Dolphine extends Animal { 
+	constructor(n, w) {
+		super()
+		this.name = n
+		this.species = "Dolphine"
+		this.weight = w
+	}
+
+	feed() {
+		alert('Dolphine\'s eat a large amount of fish & squid')
 	}
 }
