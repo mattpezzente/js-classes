@@ -1,22 +1,31 @@
-class Animal {
-	constructor() {
-		this.name
-		this.id = Utils.randomInt(0, 10000)
-		this.species
-		this.weight
+class Zoo {
+	constructor(animals) {
+		this.animals = animals
 	}
 
 	displayInfo() {
 		let insertionPoint = document.querySelector('.zoo-tbody')
-		let tempHTML = `<tr id="animal-id-${this.id}">`
-		tempHTML += `<td>${this.name}</td>`
-		tempHTML += `<td>${this.id}</td>`
-		tempHTML += `<td>${this.species}</td>`
-		tempHTML += `<td>${this.weight}</td>`
-		tempHTML += `<td>${Animal.zoo}</td>`
-		tempHTML += '</tr>'
-		insertionPoint.insertAdjacentHTML('beforeend', tempHTML)
-		document.querySelector(`#animal-id-${this.id}`).addEventListener('click', this.feed)
+		for (var i = 0; i < this.animals.length; i++) {
+			let tempHTML = `<tr id="animal-id-${this.animals[i].id}">`
+			this.animals[i]
+			tempHTML += `<td>${this.animals[i].name}</td>`
+			tempHTML += `<td>${this.animals[i].id}</td>`
+			tempHTML += `<td>${this.animals[i].species}</td>`
+			tempHTML += `<td>${this.animals[i].weight}</td>`
+			tempHTML += `<td>${Zoo.zoo}</td>`
+			tempHTML += '</tr>'
+			insertionPoint.insertAdjacentHTML('beforeend', tempHTML)
+			document.querySelector(`#animal-id-${this.animals[i].id}`).addEventListener('click', this.animals[i].feed)
+		}
+	}
+}
+
+class Animal {
+	constructor() {
+		this.name = ''
+		this.id = Utils.randomInt(0, 10000)
+		this.species = ''
+		this.weight = 0
 	}
 
 	feed() {
