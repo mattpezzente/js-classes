@@ -1,9 +1,11 @@
+//Utility class that implements static variables
 class Utils {
 	constructor() {
 
 	}
 
-	static randomInt(min,max)
+	//Method to generate a random ID number for animals
+	static idGenerator(min,max)
 	{
 		return Math.floor(Math.random()*(max-min+1)+min);
 	}
