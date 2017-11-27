@@ -10,11 +10,11 @@ $off-black: #111
 	margin-left: auto
 	margin-right: auto
 
-legend, label, button, p, h1, h2, h3, input
+legend, label, button, p, h1, h2, h3, input, th, td
 	font-family: 'Montserrat', sans-serif;
 	color: $off-white
 
-input
+input, select
 	font-family: 'Montserrat', sans-serif;
 	color: $off-black
 
@@ -24,6 +24,9 @@ body
 
 h1
 	font-size: 1.5rem
+
+th
+	font-size: 1.125rem
 
 .main-form
 	@extend %center-object
@@ -62,6 +65,13 @@ h1
 		width: calc(80% - 0.5rem)
 		font-size: 0.75rem
 
+	select
+		display: inline-block
+		margin-bottom: 1rem
+		width: calc(80% - 1rem)
+		font-size: 0.75rem
+
+
 	.lbl-computer-type
 		width: calc(40% - 0.5rem)
 
@@ -91,29 +101,39 @@ h1
 	padding: 1rem
 	max-width: 800px
 
-.students
-	display: flex
-	flex-direction: row
-	flex-wrap: wrap
-	justify-content: left
-	padding: 0.5rem 0
+.zoo-table
+	width: 100%
+	margin-top: 1rem
 
-.student-item
-	margin: 0.25rem
-	padding: 0.5rem
-	background: #444
-	width: calc(100%/3 - 0.5rem)
+	thead
+		background: $off-black
 
-	h2
-		text-align: center
-		font-size: 1.25rem
-		margin-bottom: 1rem
+	td
+		border-bottom: 2px solid $off-black
 
-	p
-		font-size: 0.875rem
-		margin-bottom: 0.25rem
+	td, th
+		text-align: left
+		padding: 0.5rem 0.5rem
+		width: calc(100%/6)
 
-	span
-		font-weight: 300
+// .student-item
+// 	margin: 0.25rem
+// 	padding: 0.5rem
+// 	background: #444
+// 	width: calc(100%/3 - 0.5rem)
+// 	border: 2px solid #999
+// 	border-radius: 5px
+
+// 	h2
+// 		text-align: center
+// 		font-size: 1.25rem
+// 		margin-bottom: 1rem
+
+// 	p
+// 		font-size: 0.875rem
+// 		margin-bottom: 0.25rem
+
+// 	span
+// 		font-weight: 300
 
 

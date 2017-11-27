@@ -19,21 +19,44 @@
     <form class="main-form">
       <legend>Assignment #1: OOP Review</legend>
       <div class="group">
-        <label>Name: </label><input class="txt-name" type="text" data-student="student" />      
-        <label>Grades: </label><input class="txt-grades" type="text" data-student="student" />
-        <label class="lbl-computer-type">Computer Type: </label><input class="txt-computer-type" type="text" data-student="student" />
+        <label>Animal: </label>
+          <select data-zoo="animal">
+            <option>Lion</option>
+            <option>Owl</option>
+            <option>Dolphine</option>
+          </select>
+        <label>Name: </label><input class="txt-name" type="text" data-zoo="animal" />      
+        <label>Weight: </label><input class="txt-grades" type="text" data-zoo="animal" />
         <button class="btn-add" type="submit">Add</button>
       </div>
       <div class="group">
-        <label>School: </label><input class="txt-school" type="text" data-student="school" value="Full Sail University" />
+        <label>Zoo: </label><input class="txt-school" type="text" data-zoo="zoo" value="Central Park Zoo" />
         <button class="btn-update" type="submit">Update</button>
       </div>
     </form>
   </main>
   <section class="content">
-    <h1>Students</h1>
-    <ul class="students">
-    </ul>
+    <h1>Zoo Animals</h1>
+    <table class="zoo-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Species</th>
+          <th>Weight</th>
+          <th>Zoo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bobo</td>
+          <td>23423</td>
+          <td>Lion</td>
+          <td>232ibs</td>
+          <td>Central Park Zoo</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <footer>
   </footer>

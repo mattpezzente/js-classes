@@ -39,11 +39,11 @@ table {
   margin-left: auto;
   margin-right: auto; }
 
-legend, label, button, p, h1, h2, h3, input {
+legend, label, button, p, h1, h2, h3, input, th, td {
   font-family: 'Montserrat', sans-serif;
   color: #eee; }
 
-input {
+input, select {
   font-family: 'Montserrat', sans-serif;
   color: #111; }
 
@@ -53,6 +53,9 @@ body {
 
 h1 {
   font-size: 1.5rem; }
+
+th {
+  font-size: 1.125rem; }
 
 .main-form {
   display: -webkit-box;
@@ -91,6 +94,11 @@ h1 {
     margin-bottom: 1rem;
     width: calc(80% - 0.5rem);
     font-size: 0.75rem; }
+  .main-form select {
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: calc(80% - 1rem);
+    font-size: 0.75rem; }
   .main-form .lbl-computer-type {
     width: calc(40% - 0.5rem); }
   .main-form .txt-computer-type {
@@ -115,32 +123,14 @@ h1 {
   padding: 1rem;
   max-width: 800px; }
 
-.students {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  padding: 0.5rem 0; }
-
-.student-item {
-  margin: 0.25rem;
-  padding: 0.5rem;
-  background: #444;
-  width: calc(100%/3 - 0.5rem); }
-  .student-item h2 {
-    text-align: center;
-    font-size: 1.25rem;
-    margin-bottom: 1rem; }
-  .student-item p {
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem; }
-  .student-item span {
-    font-weight: 300; }
+.zoo-table {
+  width: 100%;
+  margin-top: 1rem; }
+  .zoo-table thead {
+    background: #111; }
+  .zoo-table td {
+    border-bottom: 2px solid #111; }
+  .zoo-table td, .zoo-table th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    width: calc(100%/6); }
